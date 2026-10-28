@@ -45,7 +45,7 @@
     "billedMonthly": "Maandelijks",
     "billedYearly": "Jaarlijks",
     "closeDetails": "Sluiten",
-    "price": "{0}€",
+    "price": "€{0}",
     "processing_wait": "Bedankt voor uw steun! We vragen u te wachten tot we uw abonnement verwerkt hebben.",
     "processing_error": "Er ging iets verkeerd terwijl we uw abonnement aan het verwerken waren",
     "processing_error_details": "Als uw account's quota niet automatisch geüpdate wordt binnen het komende uur, neemt u alstublieft contact op met support via <a href=\"mailto:billing@cryptpad.fr\">billing@cryptpad.fr</a>.",
