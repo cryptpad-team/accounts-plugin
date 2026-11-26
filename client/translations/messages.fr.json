@@ -128,5 +128,7 @@
     "cloud_feature1": "Entièrement administré, ou support suivant vos termes",
     "header_quota": "Fichiers envoyés jusqu'à 150MB",
     "shared_by": "Abonnement partagé par",
-    "processing_success": "Votre abonnement a été activé avec succès. Merci pour votre soutien !"
+    "processing_success": "Votre abonnement a été activé avec succès. Merci pour votre soutien !",
+    "removeCardConfirm": "Vous êtes sur le point de supprimer votre moyen de paiement. Cela ne supprimera pas votre abonnement en cours, et vous pourrez rajouter un nouveau moyen de paiement avant son renouvellement. Êtes-vous sûr·e ?",
+    "removeCard": "Supprimer le moyen de paiement"
 }
