@@ -214,8 +214,10 @@ define([
             ]);
 
             return h('div.cp-accounts-mysub.cp-gifted', [
-                avatar,
-                user,
+                h('div.cp-accounts-mysub-user', [
+                    avatar,
+                    user,
+                ]),
                 plan
             ]);
         }
@@ -232,7 +234,11 @@ define([
         let br = h('br');
         const user = h('div.cp-accounts-user', [
             h('span.cp-accounts-username', userData.name),
-            h('span.cp-accounts-usermanage', [manageButton, br, removeCardButton])
+        ]);
+        const usermanage = h('span.cp-accounts-usermanage', [
+            manageButton,
+            br,
+            removeCardButton
         ]);
 
         if (!APP.myPlanPm) {
@@ -304,8 +310,13 @@ define([
         });
 
         return h('div.cp-accounts-mysub', [
-            avatar,
-            user,
+            h('div.cp-accounts-mysub-user-paid', [
+                h('div.cp-accounts-mysub-user-paid-name', [
+                    avatar,
+                    user,
+                ]),
+                usermanage
+            ]),
             plan
         ]);
     };
