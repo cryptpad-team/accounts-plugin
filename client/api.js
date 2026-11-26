@@ -41,6 +41,13 @@ const factory = (Util, Commands) => {
         });
     };
 
+    Api.removeCard = (id, cb) => {
+        post({
+            command: 'REMOVE_CARD',
+            id
+        }, cb);
+    };
+
     Api.updateQuota = cb => {
         post({
             command: 'UPDATE_QUOTA'

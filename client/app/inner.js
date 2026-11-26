@@ -225,10 +225,20 @@ define([
             Icons.get('user-directory'),
             h('span', Messages.stripe_manage)
         ]);
+        const removeCardButton = h('button.btn.btn-case.btn-danger-alt.cp-remove-card', [
+            Icons.get('destroy'),
+            h('span', Messages.removeCard)
+        ]);
+        let br = h('br');
         const user = h('div.cp-accounts-user', [
             h('span.cp-accounts-username', userData.name),
-            h('span.cp-accounts-usermanage', manageButton)
+            h('span.cp-accounts-usermanage', [manageButton, br, removeCardButton])
         ]);
+
+        if (!APP.myPlanPm) {
+            $(br).remove();
+            $(removeCardButton).remove();
+        }
 
         const priceValue = Plans.getPlanPrice(planId, yearly);
         const priceKey = yearly ? 'price_yearly' : 'price_monthly';
@@ -276,6 +286,20 @@ define([
                     return void UI.alert(Messages.error);
                 }
                 common.gotoURL(val);
+            });
+        });
+        $(removeCardButton).click(() => {
+            UI.confirm(Messages.removeCardConfirm, yes => {
+                if (!yes) { return; }
+                $(removeCardButton).prop('disabled', 'disabled');
+                Api.removeCard(APP.myPlan?.id, (err, val) => {
+                    if (err) {
+                        $(removeCardButton).prop('disabled', false);
+                        return void UI.alert(Messages.error);
+                    }
+                    UI.log(MessagesCP.saved);
+                    $(removeCardButton).remove();
+                });
             });
         });
 
@@ -690,6 +714,7 @@ define([
         Api.getMySub((err, val) => {
             firing = false;
             APP.myPlan = val?.plan ? val : false;
+            APP.myPlanPm = val?.hasPm;
             APP.isAdmin = val?.isAdmin;
             andThen(forceCat);
         });
