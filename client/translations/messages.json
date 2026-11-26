@@ -101,7 +101,7 @@
     "price_monthly": "{0}€ monthly",
     "price_yearly": "{0}€ yearly",
     "renews": "Renews: {0}",
-    "canceled": "Susbcription canceled.<br>Benefits active until <strong>{0}</strong>.",
+    "canceled": "Subscription canceled.<br>Benefits active until <strong>{0}</strong>.",
     "processing_success": "Your subscription has been succesfully activated. Thank you for your support!",
     "stripe_switch": "Switch plan",
     "stripe_renew": "Renew subscription",
