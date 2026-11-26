@@ -128,5 +128,7 @@
     "admin_giftTab": "Give subscription",
     "show_admin_only": "Show admin gifts only",
     "confirmCancel": "Do you want to cancel the free subscription that was shared with you?",
-    "yourPlanIs": "Your plan: {0}"
+    "yourPlanIs": "Your plan: {0}",
+    "removeCard": "Remove card",
+    "removeCardConfirm": "You are about to remove your payment method. This won't cancel your subscription and you can add a new method before its renewal. Are you sure?"
 }
